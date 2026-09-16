@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100;
+  }
+
+  ::selection {
+    @apply bg-amber-200 dark:bg-amber-700/60;
+  }
+}
+
+@layer components {
+  .prose-note {
+    @apply max-w-none leading-relaxed text-zinc-800 dark:text-zinc-200;
+  }
+
+  .prose-note h1 {
+    @apply mt-8 mb-4 text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50;
+  }
+
+  .prose-note h2 {
+    @apply mt-8 mb-3 text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50;
+  }
+
+  .prose-note h3 {
+    @apply mt-6 mb-2 text-xl font-semibold text-zinc-900 dark:text-zinc-50;
+  }
+
+  .prose-note p {
+    @apply my-4;
+  }
+
+  .prose-note ul {
+    @apply my-4 list-disc space-y-1 pl-6;
+  }
+
+  .prose-note ol {
+    @apply my-4 list-decimal space-y-1 pl-6;
+  }
+
+  .prose-note li > ul,
+  .prose-note li > ol {
+    @apply my-1;
+  }
+
+  .prose-note a {
+    @apply text-amber-700 underline decoration-amber-400/60 underline-offset-2 hover:decoration-amber-500 dark:text-amber-400;
+  }
+
+  .prose-note blockquote {
+    @apply my-4 border-l-4 border-amber-400/70 pl-4 italic text-zinc-600 dark:text-zinc-400;
+  }
+
+  .prose-note code {
+    @apply rounded bg-zinc-200/80 px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-zinc-800;
+  }
+
+  .prose-note pre {
+    @apply my-4 overflow-x-auto rounded-xl bg-zinc-900 p-4 text-sm text-zinc-100 dark:bg-zinc-900;
+  }
+
+  .prose-note pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  .prose-note hr {
+    @apply my-8 border-zinc-200 dark:border-zinc-800;
+  }
+
+  .prose-note table {
+    @apply my-4 w-full border-collapse text-sm;
+  }
+
+  .prose-note th,
+  .prose-note td {
+    @apply border border-zinc-200 px-3 py-2 dark:border-zinc-700;
+  }
+
+  .prose-note th {
+    @apply bg-zinc-100 font-semibold dark:bg-zinc-900;
+  }
+
+  .card {
+    @apply rounded-2xl border border-zinc-200/80 bg-white p-5 shadow-sm transition
+      hover:border-amber-300/80 hover:shadow-md
+      dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-amber-700/50;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full bg-zinc-100 px-2.5 py-0.5 text-xs font-medium
+      text-zinc-700 transition hover:bg-amber-100 hover:text-amber-900
+      dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-amber-900/40 dark:hover:text-amber-200;
+  }
+
+  .chip-active {
+    @apply bg-amber-100 text-amber-900 dark:bg-amber-900/50 dark:text-amber-200;
+  }
+}
